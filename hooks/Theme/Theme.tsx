@@ -18,12 +18,24 @@ const theme = {
       fontPrimary: "#110E1B",
       fontSecondary: "#F7F7FB",
       border: "#BBBBBB",
-      trundlePrimary: "#EE6943",
-      trundleSecondary: "#8C4226",
-      glascPrimary: "#05B1B0",
-      glascSecondary: "#1E7273",
-      urgotPrimary: "#B86ECC",
-      urgotSecondary: "#552883",
+      trundle: {
+        primary: "#EE6943",
+        secondary: "#8C4226",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FightNight_Trundle_Splash.jpeg",
+      },
+      glasc: {
+        primary: "#05B1B0",
+        secondary: "#1E7273",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FrightNight_Renata_and_Nautilus_Splash.jpeg",
+      },
+      urgot: {
+        primary: "#B86ECC",
+        secondary: "#552883",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FrightNightUrgot_Splash.jpeg",
+      },
     },
   },
   dark: {
@@ -33,12 +45,24 @@ const theme = {
       fontPrimary: "#F7F7FB",
       fontSecondary: "#F7F7FB",
       border: "#BBBBBB",
-      trundlePrimary: "#EE6943",
-      trundleSecondary: "#8C4226",
-      glascPrimary: "#05B1B0",
-      glascSecondary: "#1E7273",
-      urgotPrimary: "#B86ECC",
-      urgotSecondary: "#552883",
+      trundle: {
+        primary: "#EE6943",
+        secondary: "#8C4226",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FightNight_Trundle_Splash.jpeg",
+      },
+      glasc: {
+        primary: "#05B1B0",
+        secondary: "#1E7273",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FrightNight_Renata_and_Nautilus_Splash.jpeg",
+      },
+      urgot: {
+        primary: "#B86ECC",
+        secondary: "#552883",
+        splash:
+          "https://assets.5pots.com/file/cincopots/splash/FrightNightUrgot_Splash.jpeg",
+      },
     },
   },
   screens: {
@@ -81,6 +105,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
             box-sizing: border-box;
             height: 100%;
           }
+
           body {
             background-color: ${theme[currentTheme].color.backgroundPrimary};
             font-family: "Patrick Hand", cursive;
@@ -103,6 +128,12 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
             &:hover {
               cursor: pointer;
             }
+          }
+
+          #__next,
+          #__next > div {
+            height: 100%;
+            width: 100%;
           }
         `}
       />
