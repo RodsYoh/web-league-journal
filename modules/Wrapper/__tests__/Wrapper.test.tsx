@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { screen, render } from "@testing-library/react";
+import { screen, render } from "../../../test-utils";
 import { Wrapper } from "../Wrapper";
 
 describe("<Wrapper />", () => {

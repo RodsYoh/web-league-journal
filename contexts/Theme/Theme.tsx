@@ -37,10 +37,18 @@ const theme = {
           "https://assets.5pots.com/file/cincopots/splash/FrightNightUrgot_Splash.jpeg",
       },
     },
+    screens: {
+      xs: `only screen and (min-width: ${breakpoints.xs}px)`,
+      sm: `only screen and (min-width: ${breakpoints.sm}px)`,
+      md: `only screen and (min-width: ${breakpoints.md}px)`,
+      lg: `only screen and (min-width: ${breakpoints.lg}px)`,
+      xl: `only screen and (min-width: ${breakpoints.xl}px)`,
+      xxl: `only screen and (min-width: ${breakpoints.xxl}px)`,
+    },
   },
-  dark: {
+  lunari: {
     color: {
-      backgroundPrimary: "#F7F7FB",
+      backgroundPrimary: "#110E1B",
       backgroundSecondary: "#110E1B",
       fontPrimary: "#F7F7FB",
       fontSecondary: "#F7F7FB",
@@ -64,14 +72,14 @@ const theme = {
           "https://assets.5pots.com/file/cincopots/splash/FrightNightUrgot_Splash.jpeg",
       },
     },
-  },
-  screens: {
-    xs: `only screen and (min-width: ${breakpoints.xs}px)`,
-    sm: `only screen and (min-width: ${breakpoints.sm}px)`,
-    md: `only screen and (min-width: ${breakpoints.md}px)`,
-    lg: `only screen and (min-width: ${breakpoints.lg}px)`,
-    xl: `only screen and (min-width: ${breakpoints.xl}px)`,
-    xxl: `only screen and (min-width: ${breakpoints.xxl}px)`,
+    screens: {
+      xs: `only screen and (min-width: ${breakpoints.xs}px)`,
+      sm: `only screen and (min-width: ${breakpoints.sm}px)`,
+      md: `only screen and (min-width: ${breakpoints.md}px)`,
+      lg: `only screen and (min-width: ${breakpoints.lg}px)`,
+      xl: `only screen and (min-width: ${breakpoints.xl}px)`,
+      xxl: `only screen and (min-width: ${breakpoints.xxl}px)`,
+    },
   },
 };
 
@@ -93,6 +101,7 @@ const theme = {
 export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children } = props;
   const currentTheme = "solari";
+  const championColor = "trundle";
 
   return (
     <>
@@ -137,7 +146,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
           }
         `}
       />
-      <EmotionProvider theme={theme}>{children}</EmotionProvider>
+      <EmotionProvider theme={theme[currentTheme]}>{children}</EmotionProvider>
     </>
   );
 };
